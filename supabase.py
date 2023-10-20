@@ -9,4 +9,5 @@ bucket_name=""
 res = supabase.storage.from_(bucket_name).list()
 
 with open(filepath, 'rb') as f:
+	
 	supabase.storage.from_(bucket_name).upload(file=f,path=path_on_supastorage)
